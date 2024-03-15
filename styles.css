@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede que os corações voadores causem scroll */
+    background-image: url('background.jpg'); /* Adiciona uma imagem de fundo */
+    background-size: cover;
+  }
+  
+  header {
+    background-color: rgba(255, 105, 180, 0.8); /* Rosa transparente */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  /* Estilização dos corações */
+  .heart {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4; /* Rosa */
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Animação de movimento dos corações */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efeito de "piscar" no texto da declaração */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #declaration {
+    animation: blink 1s infinite;
+  }
+  
+  /* Estilização da caixa de resposta */
+  #response {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  /* Estilização do botão de enviar */
+  #submit {
+    background-color: #ff69b4; /* Rosa */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submit:hover {
+    background-color: #ff1493; /* Rosa mais escuro */
+  }
+  
+/* Estilo do botão WhatsApp */
+#whatsapp-button {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 16px; /* Reduzindo o padding */
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Reduzindo o tamanho da fonte */
+    transition: background-color 0.3s ease;
+  }
+  
+  #whatsapp-button:hover {
+    background-color: #128C7E; /* Verde mais escuro do WhatsApp */
+  }
+  
